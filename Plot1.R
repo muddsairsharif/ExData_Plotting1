@@ -1,16 +1,14 @@
-#Plot1.script by Muddsair Sharif: muddsairsharif@gmail.com using RStudio 64Bit
+#Created by Muddsair Sharif: email id: muddsairsharif@gmail.com
+#Instructions
+#---------------------------------------------------------------------------------------------
+#To work on the plot,you need to download the "householdConsuptionData.rdata" from the github
+#https://github.com/muddsairsharif/ExData_Plotting1
+#The "householdConsuptionData.rdata" has subseted only the data from 1/2/2007 to 2/2/2007 from the raw dataset
+#If you want to check how the subsetting was done, please check the "loaddataSet.R" file
 
-# Read the Dataset from CSv File
-HHPC <- read.csv("HHPC.txt", sep=";")
-
-#View the Dataset for verification
-View(HHPC)
-
-# Setting up the format of the PNG file heaight width etc as well as path
-png("plot1.png", width = 480, height = 480)
-
-#Plot the Global Active Power i.e. Plot1
-hist(Global_active_power, main="Global Active Power", xlab="Global active power (in killowatts)", col="red")
-
-# Switch off the grafic adapter after writing to file
+#Please make sure "householdConsuptionData.rdata" is in your working directory
+load(file="householdConsuptionData.rdata")
+png(filename="plot1.png",width=480,height=480)
+hist(data$Global_active_power,xlab="Global Active Power (kilowatts)",
+     main="Global Active Power",col="red")
 dev.off()
