@@ -6,7 +6,7 @@
 #The "householdConsuptionData.rdata" has subseted only the data from 1/2/2007 to 2/2/2007 from the raw dataset
 #If you want to check how the subsetting was done, please check the "loaddataSet.R" file
 
-#Please make sure "household.rdata" is in your working directoryload(file="household.rdata")
+#Please make sure "householdConsuptionData.rdata" is in your working directoryload(file="householdConsuptionData.rdata")
 png(filename="plot3.png",width=480,height=480)
 #ploting data with perspective days
 plot(data$Wdays,data$Sub_metering_1,type="n",xlab="",ylab="Energy sub metering")
